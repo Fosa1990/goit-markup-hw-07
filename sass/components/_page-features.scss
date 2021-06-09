@@ -1,0 +1,53 @@
+// ============================== Особенности START ==============================
+// <SECTION> Контейнер ВСЕЙ секции "Особености"
+.features {
+  padding-top: 94px;
+}
+// <UL> Список Особеностей
+.features-list {
+  display: flex;
+}
+// <LI> Пункт Особености
+.features-item {
+  width: 270px;
+}
+.features-item:not(:last-child) {
+  margin-right: 30px;
+}
+// <H3> Заголовок Особености
+.title {
+  margin-top: 0;
+  margin-bottom: 10px;
+
+  color: var(--secondary-text-color);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+// <P> Текст Особености
+.title-text {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  font-weight: 400;
+  color: var(--primary-text-color);
+}
+// <DIV> Контейнер иконок в списках
+.features-thumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 120px;
+  margin-bottom: 30px;
+  border-radius: 4px;
+  background-color: var(--secondary-bg-color);
+}
+// <SVG> Иконки в списках
+.features-icon {
+  fill: currentColor;
+  width: 70px;
+  height: 70px;
+}
+// ============================== Особенности END ==============================

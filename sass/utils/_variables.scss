@@ -1,0 +1,37 @@
+// ============================== Правила START ==============================
+:root {
+  --header-color: #ececec;
+  --footer-color: #2f303a;
+  --primary-text-color: #757575;
+  --secondary-text-color: #212121;
+  --third-text-color: #ffffff;
+  --button-white-color: #eeeeee;
+  // Borders
+  --card-border-color: #eeeeee;
+  --modal-border-color: rgba(0, 0, 0, 0.1);
+  // Accents
+  --main-accent-color: #2196f3;
+  --secondary-accent-color: #188ce8;
+  // BackGrounds
+  --primary-bg-color: #e5e5e5;
+  --secondary-bg-color: #f5f4fa;
+  --banner-bg-color: #c4c4c4;
+  --social-bg-color: rgba(255, 255, 255, 0.1);
+  --card-bg-color: rgba(47, 48, 58, 0.8);
+  --card-portfolio-bg-color: rgba(33, 150, 243, 0.9);
+  --backdrop-color: rgba(0, 0, 0, 0.2);
+  // Named Colors
+  --black-color: #000000;
+  --address-color: rgba(255, 255, 255, 0.6);
+  --primary-icon-color: #afb1b8;
+  // Gradient Colors
+  --start-color: rgba(47, 48, 58, 0.4);
+  --end-color: rgba(47, 48, 58, 0.4);
+  // Shadow Colors
+  --shadow-primary: 0px 3px 1px rgba(0, 0, 0, 0.1),
+    0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  --shadow-secondary: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  --shadow-third: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+// ============================== Правила END ==============================

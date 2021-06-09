@@ -1,0 +1,83 @@
+// ============================== Наша команда START ==============================
+// <SECTION> Контейнер Всей секции Наша Команда
+.section.team {
+  background-color: var(--secondary-bg-color);
+}
+// <UL> Список Сотрудников Камнды
+.team-list {
+  display: flex;
+  color: var(--secondary-text-color);
+}
+// <LI> Сотрудник Команды
+.team-item:not(:last-child) {
+  margin-right: 30px;
+}
+.team-item {
+  padding-bottom: 30px;
+
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: var(--shadow-primary);
+  background: var(--third-text-color);
+}
+// <DIV> Контейнер Низа карточки
+.team-list-title {
+  padding: 30px 32px 16px 32px;
+}
+// <H3> Название Сотрудника
+.team-list-name {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.18;
+  text-align: center;
+}
+// <P> Должность Сотрудника
+.team-list-job {
+  margin: 0;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.18;
+  text-align: center;
+  color: var(--primary-text-color);
+}
+// =============== Список социальных сетей в карточках ===============
+// <A> Ссылка Сотрудника Команды
+.team-link {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-icon-color);
+
+  transform: rotateZ(0deg);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 1250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+// <UL> Список на соцмальные сети в карточке Сотрудника Команды
+.team-list-socials {
+  display: flex;
+  padding-right: 32px;
+  padding-left: 32px;
+}
+.team-item-social:not(:last-child) {
+  width: calc((100% - 3 * 10px) / 4);
+  margin-right: 10px;
+}
+// <SVG> Иконка соцмальные сети в карточке Сотрудника Команды
+.icon-team {
+  fill: currentColor;
+}
+// <A> Ссылка соцмальной сети в карточке Сотрудника Команды
+.team-link:hover,
+.team-link:focus {
+  color: var(--third-text-color);
+  background-color: var(--main-accent-color);
+  transform: rotateZ(360deg);
+}
+// ============================== Наша команда END ==============================

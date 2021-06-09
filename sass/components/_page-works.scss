@@ -1,0 +1,51 @@
+// ============================== Чем мы занимаемся START ==============================
+// <SECTION> Контейнер ВСЕЙ секции
+.section.works {
+  padding-top: 0;
+}
+// <H2> Заголовок "Чем мы занимаемся"
+.section-title {
+  margin-top: 0;
+  margin-bottom: 50px;
+
+  color: var(--secondary-text-color);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+}
+// <UL> Список Иконок
+.works-list {
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+}
+//  =============== Карточки Оверлей START ===============
+// <LI> Список иконок
+.works-item {
+  position: relative;
+}
+// <DIV> Контейнер для надписи поверх иконки
+.works-item-thumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 27px;
+
+  background: var(--card-bg-color);
+}
+// <P> Текст Оверлея
+.works-item-img-text {
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--third-text-color);
+}
+//  =============== Карточки Оверлей END ===============
+// ============================== Чем мы занимаемся END==============================
