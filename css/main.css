@@ -345,10 +345,10 @@ ul {
   cursor: pointer;
 }
 
-.form__checkbox:checked + .form__icon-checkbox {
+.form__checkbox:checked ~ .form__icon-checkbox {
   border-color: transparent;
   background-color: var(--main-accent-color);
-  background-image: url(../../images/icon-check.svg);
+  background-image: url(../images/icon-check.svg);
   background-size: contain;
   background-origin: border-box;
 }

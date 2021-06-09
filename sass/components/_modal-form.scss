@@ -163,10 +163,10 @@
   cursor: pointer;
 
   //  <form__icon-checkbox> Заменят чекбокс на иконку при клике
-  .form__checkbox:checked + & {
+  .form__checkbox:checked ~ & {
     border-color: transparent;
     background-color: var(--main-accent-color);
-    background-image: url(../../images/icon-check.svg);
+    background-image: url(../images/icon-check.svg);
     background-size: contain;
     background-origin: border-box;
   }
