@@ -9,20 +9,12 @@
 @import './base/container';
 
 // COMPONENTS
-@import './components/button-main';
-@import './components/title';
+// @import './components/button-main';
+@import './components/button-second';
 @import './components/logo';
-@import './components/modal-backdrop';
-@import './components/modal-window';
-@import './components/modal-form';
 
 // LAYOUT
 @import './layout/page-header';
-@import './layout/page-hero';
-@import './layout/page-features';
-@import './layout/page-works';
-@import './layout/page-team';
-@import './layout/page-clients';
 @import './layout/page-portfolio';
 @import './layout/page-footer';
 

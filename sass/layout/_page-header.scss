@@ -1,5 +1,10 @@
 // =================================== HEADER START ===================================
 // ============================== Главная навигация ==============================
+.header {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--header-color);
+}
 // Контейнер главной навигации
 .main-navigation {
   display: flex;
@@ -14,14 +19,21 @@
 .site-nav {
   display: flex;
   align-items: center;
+  // <UL> Список Контактов = Ховер/Фокус
+  &:hover,
+  &:focus {
+    color: var(--main-accent-color);
+  }
 }
 // <LI> Пункт навигации
-.site-nav-item {
+.site-nav__item {
   position: relative;
+
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
 }
-.site-nav-item:not(:last-child) {
-  margin-right: 50px;
-}
+
 //  Полоска Текущей Странички - Стаитическая
 .link.current::after {
   position: absolute;
@@ -35,32 +47,10 @@
   background: var(--main-accent-color);
 }
 
-// <A> Логотип
-.logo {
-  width: 145px;
-  height: 31px;
-
-  font-family: 'raleway', sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
-
-  color: var(--main-accent-color);
-}
-.nav-logo {
+.main-nav__logo {
   margin-right: 93px;
 }
-// <SPAN> Цвет Лого в Хедере
-.accent-logo-top {
-  color: #000000;
-}
-// <UL> Список Контактов = Ховер/Фокус
-.site-nav.list:hover,
-.site-nav.list:focus {
-  color: var(--main-accent-color);
-}
+
 // <A> Навигация по страницам
 .site-nav .link {
   font-weight: 500;
@@ -72,6 +62,7 @@
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .site-nav .link:hover,
 .site-nav .link:focus {
   color: var(--main-accent-color);
@@ -83,28 +74,32 @@
 // ========== Контакты ==========
 .contacts {
   margin-left: auto;
-}
-// <A> Ссылка в Контактах Хедера
-.contacts .link {
-  display: flex;
-  align-items: center;
-  margin-left: auto;
 
-  height: 16px;
-  color: var(--primary-text-color);
+  // <A> Ссылка в Контактах Хедера
+  & .link {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+
+    height: 16px;
+    color: var(--primary-text-color);
+  }
 }
+
 // <SVG> Контакты-иконки (Телефон и Конверт)
-.icon-contacts {
+.contacts__icon {
   fill: currentColor;
   margin-right: 10px;
 
   transform: rotateZ(0deg);
 
   transition: transform 1250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  // <A:hover>--><SVG> Анимация иконок Конверта и Мобилки
+  .link:hover &,
+  .link:focus & {
+    transform: rotateZ(360deg);
+  }
 }
-// <A:hover>--><SVG> Анимация иконок Конверта и Мобилки
-.link:hover .icon-contacts,
-.link:focus .icon-contacts {
-  transform: rotateZ(360deg);
-}
+
 // =================================== HEADER END ===================================

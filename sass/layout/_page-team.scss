@@ -4,27 +4,29 @@
   background-color: var(--secondary-bg-color);
 }
 // <UL> Список Сотрудников Камнды
-.team-list {
+.team__list {
   display: flex;
   color: var(--secondary-text-color);
 }
 // <LI> Сотрудник Команды
-.team-item:not(:last-child) {
-  margin-right: 30px;
-}
-.team-item {
+
+.team__item {
   padding-bottom: 30px;
 
   border-radius: 0px 0px 4px 4px;
   box-shadow: var(--shadow-primary);
   background: var(--third-text-color);
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 // <DIV> Контейнер Низа карточки
-.team-list-title {
+.team__box {
   padding: 30px 32px 16px 32px;
 }
 // <H3> Название Сотрудника
-.team-list-name {
+.team__name {
   margin-top: 0;
   margin-bottom: 10px;
   font-weight: 500;
@@ -33,7 +35,7 @@
   text-align: center;
 }
 // <P> Должность Сотрудника
-.team-list-job {
+.team__job {
   margin: 0;
 
   font-weight: 400;
@@ -44,7 +46,7 @@
 }
 // =============== Список социальных сетей в карточках ===============
 // <A> Ссылка Сотрудника Команды
-.team-link {
+.team__social-link {
   display: flex;
   width: 44px;
   height: 44px;
@@ -58,26 +60,28 @@
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     transform 1250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  // <A> Ссылка соцмальной сети в карточке Сотрудника Команды
+  &:hover,
+  &:focus {
+    color: var(--third-text-color);
+    background-color: var(--main-accent-color);
+    transform: rotateZ(360deg);
+  }
 }
 // <UL> Список на соцмальные сети в карточке Сотрудника Команды
-.team-list-socials {
+.team__socials-list {
   display: flex;
   padding-right: 32px;
   padding-left: 32px;
 }
-.team-item-social:not(:last-child) {
+.team__social-item:not(:last-child) {
   width: calc((100% - 3 * 10px) / 4);
   margin-right: 10px;
 }
 // <SVG> Иконка соцмальные сети в карточке Сотрудника Команды
-.icon-team {
+.team__social-icon {
   fill: currentColor;
 }
-// <A> Ссылка соцмальной сети в карточке Сотрудника Команды
-.team-link:hover,
-.team-link:focus {
-  color: var(--third-text-color);
-  background-color: var(--main-accent-color);
-  transform: rotateZ(360deg);
-}
+
 // ============================== Наша команда END ==============================

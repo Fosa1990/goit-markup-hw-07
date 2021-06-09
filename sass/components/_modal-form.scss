@@ -9,8 +9,9 @@
 
   padding: 40px;
 }
+
 //  <P> Заголовок формы
-.description {
+.form__description {
   margin-bottom: 30px;
   margin-top: 0;
 
@@ -20,16 +21,19 @@
   text-align: center;
   color: var(--secondary-text-color);
 }
+
 //  <Label> Контейнер поля ввода
-.form-field {
+.form__field {
   position: relative;
   width: 100%;
+
+  &:not(:last-child) {
+    margin-bottom: 28px;
+  }
 }
-.form-field:not(:last-child) {
-  margin-bottom: 28px;
-}
+
 //  <Input> Поле ввода
-.form-input {
+.form__input {
   width: 100%;
   height: 40px;
   padding: 12px 12px 12px 42px;
@@ -44,13 +48,25 @@
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   outline: none;
+
+  //  <Input> Анимация рамки при фокусе
+  .form__field:focus-within > & {
+    border: 1px solid var(--main-accent-color);
+  }
+
+  //  Исчезновения текста плейсхолдера
+  &::placeholder {
+    color: transparent;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .form__field:focus-within &::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+  }
 }
-//  <Input> Анимация рамки при фокусе
-.form-field:focus-within > .form-input {
-  border: 1px solid var(--main-accent-color);
-}
+
 //  <Span> Описание поля
-.form-label {
+.form__label {
   position: absolute;
   top: 50%;
   left: 9%;
@@ -62,15 +78,17 @@
 
   transform: translate(0, -50%);
   transition: transform 250ms linear, color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  //  <Span> Анимация текста при фокусе поля ввода
+  .form__field:focus-within > &,
+  .form__input:not(:placeholder-shown) + & {
+    color: var(--main-accent-color);
+    transform: translateY(-40px) translateX(-40px);
+  }
 }
-//  <Span> Анимация текста при фокусе поля ввода
-.form-field:focus-within > .form-label,
-.form-input:not(:placeholder-shown) + .form-label {
-  color: var(--main-accent-color);
-  transform: translateY(-40px) translateX(-40px);
-}
+
 //  <Textarea> Полле воода комментария
-.form-comment {
+.form__comment {
   resize: none;
   width: 100%;
   height: 120px;
@@ -85,16 +103,18 @@
     border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   outline: none;
+
+  .form__field:focus-within & {
+    color: var(--secondary-text-color);
+    border-color: var(--main-accent-color);
+  }
+  &::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+  }
 }
-.form-field:focus-within .form-comment {
-  color: var(--secondary-text-color);
-  border-color: var(--main-accent-color);
-}
-.form-comment::placeholder {
-  color: rgba(117, 117, 117, 0.5);
-}
+
 //  <Span> Описание поля коментария
-.form-label-comment {
+.form__label-comment {
   position: absolute;
   top: -15%;
   left: 0;
@@ -106,29 +126,23 @@
 
   transition: transform 1000ms cubic-bezier(0.4, 0, 0.2, 1),
     color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  //  <Span> Текст Коментария
+  .form__field:focus-within > &,
+  .form__input:not(:placeholder-shown) + & {
+    color: var(--main-accent-color);
+    transform: translateX(225%);
+  }
 }
-//  <Span> Текст Коментария
-.form-field:focus-within > .form-label-comment,
-.form-input:not(:placeholder-shown) + .form-label-comment {
-  color: var(--main-accent-color);
-  transform: translateX(225%);
-}
-//  Исчезновения текста плейсхолдера
-.form-input::placeholder {
-  color: transparent;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.form-field:focus-within .form-input::placeholder {
-  color: rgba(117, 117, 117, 0.5);
-}
+
 //  <Label> Условия договора
-.form-policy {
+.form__policy {
   display: flex;
   align-items: center;
   margin-bottom: 30px;
 }
 //  <Input> Скртыть стандарртный чекбокс
-.checkbox {
+.form__checkbox {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -139,37 +153,39 @@
   overflow: hidden;
 }
 //  <Span> Иконка-чекбокс
-.icon-checkbox {
+.form__icon-checkbox {
   display: inline-block;
   width: 16px;
   height: 16px;
   margin-right: 8px;
-  border: 2px solid #2a2a2a;
+  border: 2px solid var(--checkbox-border-color);
   border-radius: 4px;
   cursor: pointer;
+
+  //  <form__icon-checkbox> Заменят чекбокс на иконку при клике
+  .form__checkbox:checked + & {
+    border-color: transparent;
+    background-color: var(--main-accent-color);
+    background-image: url(../../images/icon-check.svg);
+    background-size: contain;
+    background-origin: border-box;
+  }
+  //  <form__icon-checkbox> Фокус на чекбос (Таб)
+  .form__checkbox:focus + & {
+    border-color: var(--main-accent-color);
+  }
 }
 
 //  <Span> Текст
-.checkbox-policy {
+.form__checkbox-policy {
   font-size: 14px;
   line-height: 1.71;
 
   color: var(--primary-text-color);
 }
-//  <Icon-checkbox> Заменят чекбокс на иконку при клике
-.checkbox:checked + .icon-checkbox {
-  border-color: transparent;
-  background-color: var(--main-accent-color);
-  background-image: url(../images/icon-check.svg);
-  background-size: contain;
-  background-origin: border-box;
-}
-//  <Icon-checkbox> Фокус на чекбос (Таб)
-.checkbox:focus + .icon-checkbox {
-  border-color: var(--main-accent-color);
-}
-//  <SVG> form-icon
-.form-icon {
+
+//  <SVG> form__icon
+.form__icon {
   position: absolute;
   display: inline-block;
   top: 50%;
@@ -178,25 +194,29 @@
   transform: translateY(-50%);
 
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .form__field:focus-within > & {
+    fill: var(--main-accent-color);
+  }
 }
-.form-field:focus-within > .form-icon {
-  fill: var(--main-accent-color);
-}
+
 //  <a> Ссылка "Условия договора"
-.checkbox-link {
+.form__checkbox-link {
   color: var(--main-accent-color);
   text-decoration: underline;
   outline: none;
+
+  &:focus {
+    outline: 1px solid var(--main-accent-color);
+  }
 }
-.checkbox-link:focus {
-  outline: 1px solid var(--main-accent-color);
-}
+
 //  <Div> Контейнер кнопки отправить Форму
 .button-submit {
   display: flex;
   justify-content: center;
-}
-//  <Button> Кнопка Отправить форму
-.button-submit .submit-button {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  //  <Button> Кнопка Отправить форму
+  & .button-submit__submit-button {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
 }

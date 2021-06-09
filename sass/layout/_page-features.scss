@@ -4,18 +4,20 @@
   padding-top: 94px;
 }
 // <UL> Список Особеностей
-.features-list {
+.features__list {
   display: flex;
 }
 // <LI> Пункт Особености
-.features-item {
+.features__item {
   width: 270px;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 }
-.features-item:not(:last-child) {
-  margin-right: 30px;
-}
+
 // <H3> Заголовок Особености
-.title {
+.features__title {
   margin-top: 0;
   margin-bottom: 10px;
 
@@ -26,7 +28,7 @@
   text-transform: uppercase;
 }
 // <P> Текст Особености
-.title-text {
+.features__text {
   margin-top: 0;
   margin-bottom: 0;
 
@@ -34,7 +36,7 @@
   color: var(--primary-text-color);
 }
 // <DIV> Контейнер иконок в списках
-.features-thumb {
+.features__thumb {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -45,7 +47,7 @@
   background-color: var(--secondary-bg-color);
 }
 // <SVG> Иконки в списках
-.features-icon {
+.features__icon {
   fill: currentColor;
   width: 70px;
   height: 70px;
