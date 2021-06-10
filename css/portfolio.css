@@ -56,6 +56,11 @@
   --time2250ms: 2250ms;
   --time2500ms: 2500ms;
   --cubic: cubic-bezier(0.4, 0, 0.2, 1);
+  --ff-roboto: 'roboto', sans-serif;
+  --fw: 400;
+  --fz: 14px;
+  --lh: 1.71;
+  --ls: 0.03em;
 }
 
 body {
