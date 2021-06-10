@@ -61,7 +61,7 @@
 
   color: var(--secondary-text-color);
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--time250ms) var(--cubic);
 
   &:hover,
   &:focus {
@@ -112,7 +112,7 @@
 
   color: var(--primary-text-color);
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--time250ms) var(--cubic);
 
   &:hover,
   &:focus {
@@ -126,7 +126,7 @@
 
   transform: rotateZ(0deg);
 
-  transition: transform 1250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform var(--time1250ms) var(--cubic);
 
   // <A:hover>--><SVG> Анимация иконок Конверта и Мобилки
   .link:hover &,

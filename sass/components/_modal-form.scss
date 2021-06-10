@@ -41,11 +41,11 @@
   color: var(--primary-text-color);
 
   box-sizing: border-box;
-  border: 1px solid rgba(33, 33, 33, 0.2);
+  border: 1px solid var(--black-light-color);
   border-radius: 4px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 4px var(--black-color-15prts);
 
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border var(--time250ms) var(--cubic);
 
   outline: none;
 
@@ -57,11 +57,11 @@
   //  Исчезновения текста плейсхолдера
   &::placeholder {
     color: transparent;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color var(--time250ms) var(--cubic);
   }
 
   .form__field:focus-within &::placeholder {
-    color: rgba(117, 117, 117, 0.5);
+    color: var(--gray-color);
   }
 }
 
@@ -77,7 +77,7 @@
   color: var(--primary-text-color);
 
   transform: translate(0, -50%);
-  transition: transform 250ms linear, color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform var(--time250ms) linear, color var(--time250ms) var(--cubic);
 
   //  <Span> Анимация текста при фокусе поля ввода
   .form__field:focus-within > &,
@@ -95,12 +95,12 @@
   padding: 12px;
 
   box-sizing: border-box;
-  border: 1px solid rgba(33, 33, 33, 0.2);
+  border: 1px solid var(--black-light-color);
   border-radius: 4px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 4px var(--black-color-15prts);
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--time250ms) var(--cubic),
+    border-color var(--time250ms) var(--cubic);
 
   outline: none;
 
@@ -109,7 +109,7 @@
     border-color: var(--main-accent-color);
   }
   &::placeholder {
-    color: rgba(117, 117, 117, 0.5);
+    color: var(--gray-color);
   }
 }
 
@@ -124,8 +124,8 @@
   letter-spacing: 0.01em;
   color: var(--primary-text-color);
 
-  transition: transform 1000ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform var(--time1000ms) var(--cubic),
+    color var(--time250ms) var(--cubic);
 
   //  <Span> Текст Коментария
   .form__field:focus-within > &,
@@ -193,7 +193,7 @@
 
   transform: translateY(-50%);
 
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill var(--time250ms) var(--cubic);
 
   .form__field:focus-within > & {
     fill: var(--main-accent-color);
@@ -217,6 +217,6 @@
   justify-content: center;
   //  <Button> Кнопка Отправить форму
   & .button-submit__submit-button {
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 4px 4px var(--black-color-15prts);
   }
 }
