@@ -11,8 +11,6 @@
 // <LI> Сотрудник Команды
 
 .team__item {
-  padding-bottom: 30px;
-
   border-radius: 0px 0px 4px 4px;
   box-shadow: var(--shadow-primary);
   background: var(--third-text-color);
@@ -72,8 +70,7 @@
 // <UL> Список на соцмальные сети в карточке Сотрудника Команды
 .team__socials-list {
   display: flex;
-  padding-right: 32px;
-  padding-left: 32px;
+  padding-top: 16px;
 }
 .team__social-item:not(:last-child) {
   width: calc((100% - 3 * 10px) / 4);

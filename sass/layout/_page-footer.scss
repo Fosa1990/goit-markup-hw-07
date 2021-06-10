@@ -8,7 +8,7 @@
   background-color: var(--footer-color);
 }
 // <DIV> Контейнер ОБЩИЙ в Футере
-.footer-container {
+.footer__container {
   display: flex;
 }
 // <A> Ссылка Логотипа в Футере
@@ -19,7 +19,7 @@
 
 // =============== Левая часть футера =================
 // <DIV> Контейнер Левой Части Футера
-.address-container {
+.address__container {
   align-items: center;
   margin-right: 70px;
 }
